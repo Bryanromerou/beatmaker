@@ -1,4 +1,14 @@
 const arr = [0,0,0,0,0,0,0,0,0,0,0,0]
+
+const legend = {
+    "Clap":"Clap",
+    "Hi-Hat":"Hi-Hat",
+    "Snare":"Snare",
+    "Alt Snare":"Alt_Snare",
+    "Alt Snare 2":"Alt_Snare_2",
+    "Kick":"Kick",
+}
+
 const initialState = {
     instruments:{
         "Clap":arr,

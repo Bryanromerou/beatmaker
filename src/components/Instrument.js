@@ -8,9 +8,9 @@ const Instrument = (props) => {
     useEffect(()=>{
         const arrSquares = arr.map((elem,i)=>{
             if (elem === 0){
-                return <Square isOn = {false} key={i}/>
+                return <Square isOn = {false} index = {i} key={i} instrument={props.name}/>
             }else{
-                return <Square isOn = {true} key={i}/>
+                return <Square isOn = {true} index = {i} key={i} instrument={props.name}/>
             }
         })
         setSquares(arrSquares);
