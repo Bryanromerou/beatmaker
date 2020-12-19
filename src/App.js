@@ -1,9 +1,16 @@
+import { useState } from 'react';
 import './App.css';
 import Instrument from './components/Instrument';
 import SoundMaker from './components/SoundMaker';
 const myArr = [0,0,0,0,0,0,0,0,0,0,0,0]
 
 function App() {
+  const [playing, setPlaying] = useState(false);
+
+  const buttonHandler = () =>{
+    setPlaying(!playing);
+  }
+
   return (
     <div className="App">
       <Instrument name = "Clap" arr = {myArr}/>
@@ -13,6 +20,7 @@ function App() {
       <Instrument name = "Alt Snare 2" arr = {myArr}/>
       <Instrument name = "Kick" arr = {myArr}/>
       <SoundMaker/>
+      <button className = {playing ? "buttonPlaying":"buttonPaused"} onClick = {buttonHandler}>Play</button>
     </div>
   );
 }

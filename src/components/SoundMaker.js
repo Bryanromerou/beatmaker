@@ -1,5 +1,6 @@
 import React from 'react';
 import {Howl} from 'howler';
+import arrayToBeat from '../functions/arrayToBeat';
 
 
 const SoundMaker = () => {
@@ -7,8 +8,7 @@ const SoundMaker = () => {
         src: ['./sounds/Clap/Clap_1.wav']
     });
     const buttonHandler = () =>{
-        console.log("AH")
-        sound.play();
+        arrayToBeat();
     }
 
     return (
