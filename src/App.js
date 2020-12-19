@@ -20,7 +20,7 @@ function App() {
       <Instrument name = "Alt Snare 2" arr = {myArr}/>
       <Instrument name = "Kick" arr = {myArr}/>
       <SoundMaker/>
-      <button className = {playing ? "buttonPlaying":"buttonPaused"} onClick = {buttonHandler}>Play</button>
+      <button className = {playing ? "buttonPlaying":"buttonPaused"} onClick = {buttonHandler}>{playing ? "Playing": "Play"}</button>
     </div>
   );
 }
